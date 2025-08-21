@@ -1,0 +1,10 @@
+C:\Users\dell g15\source\repos\Bilheteria\Bilheteria\bin\Debug\Bilheteria.exe.config
+C:\Users\dell g15\source\repos\Bilheteria\Bilheteria\bin\Debug\Bilheteria.exe
+C:\Users\dell g15\source\repos\Bilheteria\Bilheteria\bin\Debug\Bilheteria.pdb
+C:\Users\dell g15\source\repos\Bilheteria\Bilheteria\obj\Debug\Bilheteria.csproj.AssemblyReference.cache
+C:\Users\dell g15\source\repos\Bilheteria\Bilheteria\obj\Debug\Bilheteria.Form1.resources
+C:\Users\dell g15\source\repos\Bilheteria\Bilheteria\obj\Debug\Bilheteria.Properties.Resources.resources
+C:\Users\dell g15\source\repos\Bilheteria\Bilheteria\obj\Debug\Bilheteria.csproj.GenerateResource.cache
+C:\Users\dell g15\source\repos\Bilheteria\Bilheteria\obj\Debug\Bilheteria.csproj.CoreCompileInputs.cache
+C:\Users\dell g15\source\repos\Bilheteria\Bilheteria\obj\Debug\Bilheteria.exe
+C:\Users\dell g15\source\repos\Bilheteria\Bilheteria\obj\Debug\Bilheteria.pdb
