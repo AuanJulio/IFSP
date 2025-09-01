@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dell g15\\source\\repos\\Bilheteria\\",
+  "WorkspaceRootPath": "C:\\Users\\dell g15\\IFSP\\EDD2\\Bilheteria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DFC70C63-88CF-46FE-947A-5BFB4045CD71}|Bilheteria\\Bilheteria.csproj|c:\\users\\dell g15\\source\\repos\\bilheteria\\bilheteria\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DFC70C63-88CF-46FE-947A-5BFB4045CD71}|Bilheteria\\Bilheteria.csproj|c:\\users\\dell g15\\ifsp\\edd2\\bilheteria\\bilheteria\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFC70C63-88CF-46FE-947A-5BFB4045CD71}|Bilheteria\\Bilheteria.csproj|solutionrelative:bilheteria\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFC70C63-88CF-46FE-947A-5BFB4045CD71}|Bilheteria\\Bilheteria.csproj|C:\\Users\\dell g15\\source\\repos\\Bilheteria\\bilheteria\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DFC70C63-88CF-46FE-947A-5BFB4045CD71}|Bilheteria\\Bilheteria.csproj|C:\\Users\\dell g15\\IFSP\\EDD2\\Bilheteria\\bilheteria\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DFC70C63-88CF-46FE-947A-5BFB4045CD71}|Bilheteria\\Bilheteria.csproj|solutionrelative:bilheteria\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -36,11 +36,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\dell g15\\source\\repos\\Bilheteria\\Bilheteria\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\dell g15\\IFSP\\EDD2\\Bilheteria\\Bilheteria\\Form1.cs",
               "RelativeDocumentMoniker": "Bilheteria\\Form1.cs",
-              "ToolTip": "C:\\Users\\dell g15\\source\\repos\\Bilheteria\\Bilheteria\\Form1.cs*",
-              "RelativeToolTip": "Bilheteria\\Form1.cs*",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAIwF0AAAAtAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\dell g15\\IFSP\\EDD2\\Bilheteria\\Bilheteria\\Form1.cs",
+              "RelativeToolTip": "Bilheteria\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T01:19:10.452Z",
               "EditorCaption": ""
@@ -49,10 +49,10 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dell g15\\source\\repos\\Bilheteria\\Bilheteria\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\dell g15\\IFSP\\EDD2\\Bilheteria\\Bilheteria\\Form1.cs",
               "RelativeDocumentMoniker": "Bilheteria\\Form1.cs",
               "ToolTip": "C:\\Users\\dell g15\\source\\repos\\Bilheteria\\Bilheteria\\Form1.cs [Design]",
-              "RelativeToolTip": "Bilheteria\\Form1.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\source\\repos\\Bilheteria\\Bilheteria\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T01:18:46.855Z"
             }

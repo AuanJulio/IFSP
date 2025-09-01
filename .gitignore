@@ -1,0 +1,12 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+
+# Arquivos temporários
+*.cache
+*.log
+*.tmp
+
+# Diretórios de índice do VS
+FileContentIndex/
