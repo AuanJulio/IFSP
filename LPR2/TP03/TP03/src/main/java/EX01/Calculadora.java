@@ -1,5 +1,19 @@
 package EX01;
 
+/*
+Alunos:
+André Luiz Nascimento de Andrade
+Auan Julio Galvão dos Santos
+
+1. Construir o Form abaixo e possibilitar o cálculo das operações de
+divisão, multiplicação, subtração e adição.
+
+OBS:
+    • O botão C = Clear e limpa a memória da calculadora e também zera o text field
+de resultado.
+    • Colocar tratamento de erros (try, catch, finally)
+*/
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -63,7 +77,6 @@ public class Calculadora extends JFrame implements ActionListener {
 
         try {
 
-            // Clear
             if (cmd.equals("C")) {
                 display.setText("0");
                 valor1 = valor2 = 0;
