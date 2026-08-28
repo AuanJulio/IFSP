@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrariaCore", "LivrariaCore\LivrariaCore.csproj", "{17D90DEE-6BB6-429B-9C82-89CFF0EB19A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrariaCommand", "LivrariaCommand\LivrariaCommand.csproj", "{D3AD7EB3-4ABB-4C24-94C0-FBBB800F4564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrariaWeb", "LivrariaWeb\LivrariaWeb.csproj", "{E7CB9018-1FB9-4E57-A72B-02D84E488473}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17D90DEE-6BB6-429B-9C82-89CFF0EB19A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17D90DEE-6BB6-429B-9C82-89CFF0EB19A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17D90DEE-6BB6-429B-9C82-89CFF0EB19A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17D90DEE-6BB6-429B-9C82-89CFF0EB19A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3AD7EB3-4ABB-4C24-94C0-FBBB800F4564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3AD7EB3-4ABB-4C24-94C0-FBBB800F4564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3AD7EB3-4ABB-4C24-94C0-FBBB800F4564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3AD7EB3-4ABB-4C24-94C0-FBBB800F4564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7CB9018-1FB9-4E57-A72B-02D84E488473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7CB9018-1FB9-4E57-A72B-02D84E488473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7CB9018-1FB9-4E57-A72B-02D84E488473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7CB9018-1FB9-4E57-A72B-02D84E488473}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
