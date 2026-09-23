@@ -1,0 +1,25 @@
+﻿@model TP02.Models.Container
+
+@{
+    ViewData["Title"] = "Excluir Container";
+}
+
+<h2>Excluir Container</h2>
+
+<h4>Tem certeza que deseja excluir este container?</h4>
+<dl class="row">
+    <dt class="col-sm-2">Número</dt>
+    <dd class="col-sm-10">@Model.Numero</dd>
+    <dt class="col-sm-2">Tipo</dt>
+    <dd class="col-sm-10">@Model.Tipo</dd>
+    <dt class="col-sm-2">Tamanho</dt>
+    <dd class="col-sm-10">@Model.Tamanho'</dd>
+    <dt class="col-sm-2">BL</dt>
+    <dd class="col-sm-10">@Model.BL?.Numero</dd>
+</dl>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

@@ -1,0 +1,42 @@
+﻿@model TP02.Models.Container
+
+@{
+    ViewData["Title"] = "Editar Container";
+}
+
+<h2>Editar Container</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Numero" class="control-label"></label>
+        <input asp-for="Numero" class="form-control" maxlength="11" />
+        <span asp-validation-for="Numero" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Tipo" class="control-label"></label>
+        <select asp-for="Tipo" class="form-control" asp-items="Html.GetEnumSelectList<TP02.Models.TipoContainer>()"></select>
+        <span asp-validation-for="Tipo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Tamanho" class="control-label"></label>
+        <select asp-for="Tamanho" class="form-control">
+            <option value="20">20 pés</option>
+            <option value="40">40 pés</option>
+        </select>
+        <span asp-validation-for="Tamanho" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="BLId" class="control-label">BL</label>
+        <select asp-for="BLId" class="form-control" asp-items="ViewBag.BLId"></select>
+        <span asp-validation-for="BLId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+</form>

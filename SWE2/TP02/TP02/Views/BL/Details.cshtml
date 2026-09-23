@@ -1,0 +1,35 @@
+﻿@model TP02.Models.BL
+
+@{
+    ViewData["Title"] = "Detalhes do BL";
+}
+
+<h2>Detalhes do BL</h2>
+
+<dl class="row">
+    <dt class="col-sm-2">Número</dt>
+    <dd class="col-sm-10">@Model.Numero</dd>
+    <dt class="col-sm-2">Consignee</dt>
+    <dd class="col-sm-10">@Model.Consignee</dd>
+    <dt class="col-sm-2">Navio</dt>
+    <dd class="col-sm-10">@Model.Navio</dd>
+</dl>
+
+<h4>Containers deste BL</h4>
+<table class="table table-sm table-bordered">
+    <thead>
+        <tr><th>Número</th><th>Tipo</th><th>Tamanho</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model.Containers)
+        {
+            <tr>
+                <td>@c.Numero</td>
+                <td>@c.Tipo</td>
+                <td>@c.Tamanho'</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">Voltar</a>
