@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TarefasApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:TarefasApp.Models"
+    Title="Minhas Tarefas">
+
+    <Grid Padding="16" RowDefinitions="*,Auto">
+
+        <CollectionView
+            Grid.Row="0"
+            ItemsSource="{Binding Tarefas}"
+            SelectionMode="Single"
+            SelectionChanged="OnTarefaSelecionada">
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout Spacing="8" VerticalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="Nenhuma tarefa cadastrada" />
+                    <Label
+                        HorizontalTextAlignment="Center"
+                        Text="Toque em 'Adicionar tarefa' para criar a primeira."
+                        TextColor="{StaticResource Gray500}" />
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Tarefa">
+                    <Border
+                        Margin="0,6"
+                        Padding="0"
+                        BackgroundColor="{AppThemeBinding Light=White,
+                                                          Dark=#2B2B2B}"
+                        Stroke="{AppThemeBinding Light=#E0E0E0,
+                                                 Dark=#444444}"
+                        StrokeShape="RoundRectangle 12">
+
+                        <Grid ColumnDefinitions="8,*">
+
+                            <BoxView Grid.Column="0" Color="{Binding CorPrioridade}" />
+
+                            <VerticalStackLayout
+                                Grid.Column="1"
+                                Padding="14"
+                                Spacing="4">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    Text="{Binding Titulo}" />
+                                <Label
+                                    FontSize="14"
+                                    LineBreakMode="TailTruncation"
+                                    MaxLines="2"
+                                    Text="{Binding Descricao}"
+                                    TextColor="{StaticResource Gray500}" />
+                                <Label
+                                    FontSize="12"
+                                    Text="{Binding Prioridade, StringFormat='Prioridade: {0}'}"
+                                    TextColor="{Binding CorPrioridade}" />
+                            </VerticalStackLayout>
+
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button
+            Grid.Row="1"
+            Margin="0,12,0,0"
+            CornerRadius="24"
+            FontAttributes="Bold"
+            HeightRequest="48"
+            Clicked="OnAdicionarClicked"
+            Text="+ Adicionar tarefa" />
+
+    </Grid>
+</ContentPage>

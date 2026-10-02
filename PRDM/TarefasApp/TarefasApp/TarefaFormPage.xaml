@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TarefasApp.TarefaFormPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Tarefa">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16">
+
+            <Label
+                x:Name="TituloPagina"
+                FontAttributes="Bold"
+                FontSize="26" />
+
+            <VerticalStackLayout Spacing="4">
+                <Label FontAttributes="Bold" Text="Título" />
+                <Entry Placeholder="Ex.: Estudar para a prova" Text="{Binding Titulo}" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="4">
+                <Label FontAttributes="Bold" Text="Descrição" />
+                <Editor
+                    AutoSize="TextChanges"
+                    HeightRequest="120"
+                    Placeholder="Descreva a tarefa"
+                    Text="{Binding Descricao}" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="4">
+                <Label FontAttributes="Bold" Text="Data de criação" />
+                <DatePicker Date="{Binding DataCriacao}" Format="dd/MM/yyyy" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="4">
+                <Label FontAttributes="Bold" Text="Prioridade" />
+                <Picker
+                    x:Name="PrioridadePicker"
+                    Title="Selecione a prioridade"
+                    SelectedItem="{Binding Prioridade}" />
+            </VerticalStackLayout>
+
+            <Grid
+                Margin="0,16,0,0"
+                ColumnDefinitions="*,*"
+                ColumnSpacing="12">
+                <Button
+                    Grid.Column="0"
+                    BackgroundColor="{StaticResource Gray500}"
+                    Clicked="OnCancelarClicked"
+                    Text="Cancelar"
+                    TextColor="White" />
+                <Button
+                    Grid.Column="1"
+                    Clicked="OnSalvarClicked"
+                    FontAttributes="Bold"
+                    Text="Salvar" />
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
