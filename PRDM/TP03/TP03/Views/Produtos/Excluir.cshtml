@@ -1,0 +1,40 @@
+﻿@model Produto
+
+@{
+    ViewData["Title"] = "Excluir produto";
+}
+
+<div class="mb-4">
+    <h1 class="h2 mb-1">Excluir produto</h1>
+    <p class="text-muted mb-0">Confira os dados antes de confirmar.</p>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="alert alert-warning" role="alert">
+            Tem certeza de que deseja excluir <strong>@Model.Nome</strong>?
+            Esta ação não poderá ser desfeita.
+        </div>
+
+        <dl class="row">
+            <dt class="col-sm-4 col-lg-3">Código</dt>
+            <dd class="col-sm-8 col-lg-9">#@Model.Id</dd>
+
+            <dt class="col-sm-4 col-lg-3">Descrição</dt>
+            <dd class="col-sm-8 col-lg-9">@Model.Descricao</dd>
+
+            <dt class="col-sm-4 col-lg-3">Preço</dt>
+            <dd class="col-sm-8 col-lg-9">@Model.Preco.ParaReais()</dd>
+
+            <dt class="col-sm-4 col-lg-3">Em estoque</dt>
+            <dd class="col-sm-8 col-lg-9">@Model.QuantidadeEstoque unidade(s)</dd>
+        </dl>
+
+        <form asp-action="ConfirmarExclusao" asp-route-id="@Model.Id" method="post">
+            <div class="d-flex flex-wrap gap-2">
+                <button type="submit" class="btn btn-danger">Confirmar exclusão</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

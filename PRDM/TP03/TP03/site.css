@@ -1,0 +1,162 @@
+﻿:root {
+    --cor-primaria: #0f766e;
+    --cor-primaria-escura: #115e59;
+    --cor-fundo: #f3f6f5;
+    --cor-texto: #1f2d2b;
+}
+
+html {
+    font-size: 15px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 650;
+    color: #14332f;
+}
+
+.barra-topo {
+    background: linear-gradient(100deg, #0b4f4a, #0f766e);
+    box-shadow: 0 3px 12px rgba(11, 79, 74, 0.2);
+}
+
+.marca-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: #ffffff;
+    color: var(--cor-primaria-escura);
+    font-weight: 800;
+}
+
+.barra-topo .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.9rem;
+}
+
+    .barra-topo .nav-link:hover,
+    .barra-topo .nav-link:focus {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+.card {
+    border: 1px solid #dfe8e5;
+    border-radius: 0.9rem;
+    box-shadow: 0 4px 14px rgba(15, 60, 55, 0.06);
+}
+
+.card-header,
+.card-footer {
+    background-color: #ffffff;
+    padding: 0.9rem 1.25rem;
+}
+
+.card-body {
+    padding: 1.4rem;
+}
+
+.btn {
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--cor-primaria);
+    --bs-btn-border-color: var(--cor-primaria);
+    --bs-btn-hover-bg: var(--cor-primaria-escura);
+    --bs-btn-hover-border-color: var(--cor-primaria-escura);
+    --bs-btn-active-bg: var(--cor-primaria-escura);
+    --bs-btn-active-border-color: var(--cor-primaria-escura);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--cor-primaria);
+    --bs-btn-border-color: var(--cor-primaria);
+    --bs-btn-hover-bg: var(--cor-primaria);
+    --bs-btn-hover-border-color: var(--cor-primaria);
+    --bs-btn-active-bg: var(--cor-primaria-escura);
+    --bs-btn-active-border-color: var(--cor-primaria-escura);
+}
+
+.resumo-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.resumo-titulo {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #5b6f6b;
+}
+
+.resumo-valor {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--cor-primaria-escura);
+}
+
+.table thead th {
+    background-color: #eaf2f0;
+    color: #35504b;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+    padding: 0.85rem 1rem;
+}
+
+.celula-descricao {
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #51635f;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.form-control:focus {
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 0.2rem rgba(20, 184, 166, 0.2);
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.field-validation-error {
+    font-size: 0.875rem;
+}
+
+input.input-validation-error,
+textarea.input-validation-error {
+    border-color: #dc3545;
+}
+
+.rodape {
+    background: #ffffff;
+    border-top: 1px solid #dfe8e5;
+    color: #5b6f6b;
+}

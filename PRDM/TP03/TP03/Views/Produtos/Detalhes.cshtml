@@ -1,0 +1,47 @@
+﻿@model Produto
+
+@{
+    ViewData["Title"] = Model.Nome;
+}
+
+<div class="mb-4">
+    <h1 class="h2 mb-1">Detalhes do produto</h1>
+    <p class="text-muted mb-0">Todas as informações cadastradas para este item.</p>
+</div>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <strong>@Model.Nome</strong>
+        <span class="badge @(Model.QuantidadeEstoque == 0 ? "text-bg-danger" : "text-bg-success")">
+            @(Model.QuantidadeEstoque == 0 ? "Esgotado" : "Disponível")
+        </span>
+    </div>
+
+    <div class="card-body">
+        <dl class="row mb-0">
+            <dt class="col-sm-4 col-lg-3">Código</dt>
+            <dd class="col-sm-8 col-lg-9">#@Model.Id</dd>
+
+            <dt class="col-sm-4 col-lg-3">Nome</dt>
+            <dd class="col-sm-8 col-lg-9">@Model.Nome</dd>
+
+            <dt class="col-sm-4 col-lg-3">Descrição</dt>
+            <dd class="col-sm-8 col-lg-9">@Model.Descricao</dd>
+
+            <dt class="col-sm-4 col-lg-3">Preço unitário</dt>
+            <dd class="col-sm-8 col-lg-9">@Model.Preco.ParaReais()</dd>
+
+            <dt class="col-sm-4 col-lg-3">Em estoque</dt>
+            <dd class="col-sm-8 col-lg-9">@Model.QuantidadeEstoque unidade(s)</dd>
+
+            <dt class="col-sm-4 col-lg-3">Valor total em estoque</dt>
+            <dd class="col-sm-8 col-lg-9 mb-0">@((Model.Preco * Model.QuantidadeEstoque).ParaReais())</dd>
+        </dl>
+    </div>
+
+    <div class="card-footer d-flex flex-wrap gap-2">
+        <a asp-action="Editar" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+        <a asp-action="Excluir" asp-route-id="@Model.Id" class="btn btn-outline-danger">Excluir</a>
+        <a asp-action="Index" class="btn btn-outline-secondary">Voltar à lista</a>
+    </div>
+</div>

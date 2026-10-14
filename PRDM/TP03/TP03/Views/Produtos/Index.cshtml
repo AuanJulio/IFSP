@@ -1,0 +1,122 @@
+﻿@model IEnumerable<Produto>
+
+@functions {
+    private static (string Classe, string Texto) StatusEstoque(int quantidade) => quantidade switch
+    {
+        0 => ("text-bg-danger", "Esgotado"),
+        <= 5 => ("text-bg-warning", $"{quantidade} un. (baixo)"),
+        _ => ("text-bg-success", $"{quantidade} un.")
+    };
+}
+
+@{
+    ViewData["Title"] = "Produtos";
+    var busca = ViewData["Busca"] as string;
+    var totalProdutos = Model.Count();
+    var totalUnidades = Model.Sum(p => p.QuantidadeEstoque);
+    var valorEmEstoque = Model.Sum(p => p.Preco * p.QuantidadeEstoque);
+}
+
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+    <div>
+        <h1 class="h2 mb-1">Produtos</h1>
+        <p class="text-muted mb-0">Gerencie o catálogo e o estoque da sua loja.</p>
+    </div>
+    <a asp-action="Criar" class="btn btn-primary">+ Novo produto</a>
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="card resumo-card">
+            <div class="card-body">
+                <span class="resumo-titulo">Produtos listados</span>
+                <span class="resumo-valor">@totalProdutos</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card resumo-card">
+            <div class="card-body">
+                <span class="resumo-titulo">Unidades em estoque</span>
+                <span class="resumo-valor">@totalUnidades</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card resumo-card">
+            <div class="card-body">
+                <span class="resumo-titulo">Valor em estoque</span>
+                <span class="resumo-valor">@valorEmEstoque.ParaReais()</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form asp-action="Index" method="get" class="row g-2 mb-3">
+    <div class="col-sm-8 col-md-6">
+        <input type="search" name="busca" value="@busca" class="form-control"
+               placeholder="Buscar produto pelo nome..." />
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-outline-primary">Buscar</button>
+        @if (!string.IsNullOrWhiteSpace(busca))
+        {
+            <a asp-action="Index" class="btn btn-link">Limpar</a>
+        }
+    </div>
+</form>
+
+<div class="card">
+    <div class="table-responsive">
+        <table class="table mb-0">
+            <thead>
+                <tr>
+                    <th>Cód.</th>
+                    <th>Produto</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                    <th class="text-end">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        var status = StatusEstoque(item.QuantidadeEstoque);
+                        <tr>
+                            <td class="text-muted">#@item.Id</td>
+                            <td class="fw-semibold">@item.Nome</td>
+                            <td class="celula-descricao" title="@item.Descricao">@item.Descricao</td>
+                            <td class="text-nowrap">@item.Preco.ParaReais()</td>
+                            <td><span class="badge rounded-pill @status.Classe">@status.Texto</span></td>
+                            <td class="text-end text-nowrap">
+                                <a asp-action="Detalhes" asp-route-id="@item.Id"
+                                   class="btn btn-sm btn-outline-secondary">Detalhes</a>
+                                <a asp-action="Editar" asp-route-id="@item.Id"
+                                   class="btn btn-sm btn-outline-primary">Editar</a>
+                                <a asp-action="Excluir" asp-route-id="@item.Id"
+                                   class="btn btn-sm btn-outline-danger">Excluir</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6" class="text-center py-5">
+                            <h5 class="mb-1">Nenhum produto encontrado</h5>
+                            <p class="text-muted mb-3">
+                                @(string.IsNullOrWhiteSpace(busca)
+                                                            ? "Cadastre o primeiro produto para começar."
+                                                            : "Tente buscar por outro nome.")
+                        </p>
+                        <a asp-action="Criar" class="btn btn-primary">Cadastrar produto</a>
+                    </td>
+                </tr>
+                                }
+            </tbody>
+        </table>
+    </div>
+</div>
