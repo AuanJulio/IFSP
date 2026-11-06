@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PRDM_TP03.ViewModels"
+             x:Class="PRDM_TP03.Views.BuscaPage"
+             x:DataType="vm:BuscaViewModel"
+             Title="Rastreamento de Pacotes">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="18" VerticalOptions="Center">
+
+            <Label Text="📦" FontSize="64" HorizontalOptions="Center" />
+
+            <Label Text="Rastreie seu pacote"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Digite o código de rastreamento para acompanhar a sua encomenda."
+                   HorizontalTextAlignment="Center"
+                   TextColor="Gray" />
+
+            <Entry Placeholder="Ex.: BR123456789BR"
+                   Text="{Binding CodigoRastreamento}"
+                   TextTransform="Uppercase"
+                   ReturnCommand="{Binding BuscarCommand}"
+                   MaxLength="20" />
+
+            <Label Text="{Binding MensagemErro}"
+                   TextColor="Red"
+                   IsVisible="{Binding TemErro}"
+                   HorizontalTextAlignment="Center" />
+
+            <Button Text="Rastrear"
+                    Command="{Binding BuscarCommand}" />
+
+            <ActivityIndicator IsRunning="{Binding IsBusy}"
+                               IsVisible="{Binding IsBusy}" />
+
+            <Label Text="Códigos para teste:&#10;BR123456789BR  •  BR987654321BR  •  BR555555555BR"
+                   FontSize="12"
+                   TextColor="Gray"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,20,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
